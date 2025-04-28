@@ -123,6 +123,7 @@ moves you to documents
 ### Executing .sh :
 
   . **chmod +x:**
+  
   ```chmod +x <file>```	Make ```<file> ```executable. It adds the executable permission to a file, telling the system that it can be run as a program.
   ```bash
  $  chmod +x myscript.sh
