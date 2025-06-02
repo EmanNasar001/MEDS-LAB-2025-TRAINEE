@@ -2,10 +2,7 @@ module sqrt_integer;
 module sqrt_integer;
     int x = 9;
     int result;
-initial begin
-        result = sqrt(x);
-        $display("sqrt(%0d) = %0d", x, result);
-    end
+
 
     function int sqrt(input int x);
         int left, right, mid, solution;
