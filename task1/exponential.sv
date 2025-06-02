@@ -17,10 +17,5 @@ module exp_taylor;
         return exp_sum;
     endfunction
 
-    initial begin
-        real test_val = 2.0;
-        real test = exp(test_val);
-        $display("exp(%0.2f) ≈ %0.9f", test_val, test);
-    end
 
 endmodule
