@@ -1,5 +1,5 @@
 module sqrt_integer;
-module sqrt_integer;
+
     int x = 9;
     int result;
 
