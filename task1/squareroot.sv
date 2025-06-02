@@ -1,16 +1,10 @@
-module sqrt_integer;
+module sqrt_integer (
+    input  logic [31:0] x,
+    output logic [31:0] result
+);
 
-    int x = 9;
-    int result;
-
-
-    function int sqrt(input int x);
-        int left, right, mid, solution;
-        
-        if (x < 0) begin
-            $display("Sqrt of negative values is not allowed");
-            return -1;
-        end
+    function automatic logic [31:0] sqrt(input logic [31:0] x);
+        logic [31:0] left, right, mid, solution;
         
         if (x < 2) begin
             return x;
@@ -21,20 +15,21 @@ module sqrt_integer;
         solution = 0;
 
         while (left <= right) begin
-            mid = (left + right) / 2;
+            mid = (left + right) >> 1;  // Division by 2
 
             if (mid * mid > x) begin
                 right = mid - 1;
-            end
-            else if (mid * mid < x) begin
+            end else if (mid * mid < x) begin
                 solution = mid;
                 left = mid + 1;
-            end
-            else begin
+            end else begin
                 return mid;
             end
         end
 
         return solution;
     endfunction
+
+    assign result = sqrt(x);
+
 endmodule
