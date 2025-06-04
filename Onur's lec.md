@@ -86,7 +86,7 @@
  - Logical Completeness : set of OR, AND , NOT gates can be used to build a circuit of any truth  table
 
  ## Lecture 3: Sequential Logic 
- 1- Trisatate Buffer:
+ 1- Tristate Buffer:
  - It acts like a switch 
  -  floating signals
  - Shared bus using trisate buffer containing processor ,Video , ethernet , memory
